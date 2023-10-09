@@ -1,5 +1,6 @@
 from phuong_tien_giao_thong import PhuongTienGiaoThong
 from oto import Oto
+from hien_thi_thong_tin import hien_thi
 
 #phuong tien giao thong
 
@@ -26,4 +27,20 @@ xe_oto.huy_bo()
 
 list=xe_oto.lay_thong_tin()
 print(list)
+
+
+def nhap_nhanh():
+    danh_sach_oto = []
+
+    xe_oto = Oto("hang1", "ten2", 2000, 400.0, 4, 4, 'dongco1')
+    danh_sach_oto.append(xe_oto)
+
+    xe_oto = Oto("hang3", "ten3", 1765, 500.0, 4, 4, 'dongco2')
+    danh_sach_oto.append(xe_oto)
+
+    xe_oto = Oto("hang3", "ten4", 1964, 200.0, 4, 4, 'dongco3')
+    danh_sach_oto.append(xe_oto)
+
+    print(danh_sach_oto[0].descriptors())
+    hien_thi(danh_sach_oto)
 
