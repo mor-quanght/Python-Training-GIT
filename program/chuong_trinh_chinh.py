@@ -37,6 +37,20 @@ def nhap_nhanh():
     print(danh_sach_oto[0].descriptors())
     hien_thi(danh_sach_oto)
 
-nhap_hienthi_ptgt()
+#nhap_hienthi_ptgt()
 #nhap_hien_thi_oto()
 
+
+def menu():
+   print('''Chương trình chính:  
+0. Thoát
+1. Nhập từ bàn phím thông tin của một phương tiện giao thông 
+PhuongTienGiaoThong. 
+2. Hiển thị thông tin của phương tiện giao thông vừa nhập ra màn hình.  
+3. Nhập thông tin cho n đối tượng OTO bao gồm: Hãng sản xuất, Tên phương tiện, Năm sản xuất, Vận tốc tối đa, số chỗ ngồi, kiểu động cơ. 
+4. In ra màn hình thông tin của n đối tượng OTO cùng với vận tốc cơ sở. 
+5. Sắp xếp danh sách các đối tượng OTO theo thứ tự giảm dần của Vận tốc tối đa.''')
+    menu_input=input(">")
+
+
+menu()
