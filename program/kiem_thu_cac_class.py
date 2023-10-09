@@ -44,3 +44,4 @@ def nhap_nhanh():
     print(danh_sach_oto[0].descriptors())
     hien_thi(danh_sach_oto)
 
+nhap_nhanh()
