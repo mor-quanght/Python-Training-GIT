@@ -33,3 +33,6 @@ class Sinhvien(models.Model):
 
     def du_lieu(self):
         return f'{self.ten},{self.gioi_tinh},{self.tuoi},{self.diem_toan},{self.diem_ly},{self.diem_hoa},{self.diem_tb},{self.hoc_luc}'
+
+    class Meta:
+        db_table='sinhvien'

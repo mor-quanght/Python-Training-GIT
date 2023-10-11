@@ -24,11 +24,13 @@ def them_sinh_vien(reqest):
 
             hocluc = tinh_hoc_luc(diemtb)
 
-            sinhvien = Sinhvien(ten=sv_form.cleaned_data['ten'], gioi_tinh=sv_form.cleaned_data['gioi_tinh'],
-                                tuoi=sv_form.cleaned_data['tuoi'], diem_toan=sv_form.cleaned_data['diem_toan'],
-                                diem_ly=sv_form.cleaned_data['diem_ly'], diem_hoa=sv_form.cleaned_data['diem_hoa'],
-                                diem_tb=diemtb, hoc_luc=hocluc)
-            sinhvien.save()
+            content = {'ten':sv_form.cleaned_data['ten'], 'gioi_tinh':sv_form.cleaned_data['gioi_tinh'],
+                        'tuoi':sv_form.cleaned_data['tuoi'], 'diem_toan':sv_form.cleaned_data['diem_toan'],
+                        'diem_ly':sv_form.cleaned_data['diem_ly'], 'diem_hoa':sv_form.cleaned_data['diem_hoa'],
+                        'diem_tb':diemtb, 'hoc_luc':hocluc}
+
+            instance= Sinhvien.objects.create(**content)
+
             return HttpResponseRedirect('/my_menu/')
 
     else:
@@ -47,14 +49,10 @@ def cap_nhap_bang_id(reqest):
 
             hocluc = tinh_hoc_luc(diemtb)
 
-            sinhvien = Sinhvien(id=cap_nhap_form.cleaned_data['id'],ten=cap_nhap_form.cleaned_data['ten'],
+            sv_by_id=Sinhvien.objects.filter(id=cap_nhap_form.cleaned_data['id']).update(ten=cap_nhap_form.cleaned_data['ten'],
                                 gioi_tinh=cap_nhap_form.cleaned_data['gioi_tinh'],tuoi=cap_nhap_form.cleaned_data['tuoi'],
                                 diem_toan=cap_nhap_form.cleaned_data['diem_toan'],diem_ly=cap_nhap_form.cleaned_data['diem_ly'],
                                 diem_hoa=cap_nhap_form.cleaned_data['diem_hoa'],diem_tb=diemtb, hoc_luc=hocluc)
-
-            sv_by_id=Sinhvien.objects.filter(id=cap_nhap_form.cleaned_data['id'])
-            sv_by_id=sinhvien
-            sv_by_id.save()
             return HttpResponseRedirect('/my_menu/')
 
     else:
