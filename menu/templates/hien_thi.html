@@ -6,9 +6,15 @@
 </head>
 <body>
     <ul>
-        {% for sinhvien in danhsach_sv %}
-            <li>{{sinhvien}}</li>
-        {% endfor %}
+        {% if danhsach_sv %}
+            <p>ten,gioi_tinh,tuoi,diem_toan,diem_ly,diem_hoa,diem_tb,hocluc</p>
+            {% for sinhvien in danhsach_sv %}
+                <li>{{ sinhvien }}</li>
+            {% endfor %}
+        {% else %}
+            <p> không tìm thấy sinh viên với tên đó</p>
+        {% endif %}
+
     </ul>
 </body>
 </html>

@@ -29,7 +29,7 @@ class Sinhvien(models.Model):
     hoc_luc = models.CharField(choices=hocluc.choices, max_length=20)
 
     def __str__(self):
-        return f'{self.ten}'
+        return f'{self.ten},{self.gioi_tinh},{self.tuoi},{self.diem_toan},{self.diem_ly},{self.diem_hoa},{self.diem_tb},{self.hoc_luc}'
 
     def du_lieu(self):
-        return f'{self.ten},{self.gioi_tinh},{self.tuoi},{self.diem_toan},{self.diem_ly},{self.diem_hoa},{self.diem_tb},{self.hocluc}'
+        return f'{self.ten},{self.gioi_tinh},{self.tuoi},{self.diem_toan},{self.diem_ly},{self.diem_hoa},{self.diem_tb},{self.hoc_luc}'

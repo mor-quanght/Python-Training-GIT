@@ -11,6 +11,6 @@ urlpatterns = [
     path('cap_nhap_bang_id', views.cap_nhap_bang_id, name='cap_nhap_bang_id'),
     path('xoa_bang_id', views.xoa_bang_id, name='xoa_bang_id'),
     path('tim_kiem_bang_ten', views.tim_kiem_bang_ten, name='tim_kiem_bang_ten'),
-    path('sap_xep', views.sap_xep, name='sap_xep'),
+    path('sap_xep/<str:field>/<str:order>', views.sap_xep, name='sap_xep'),
     path('hien_thi', views.hien_thi, name='hien_thi'),
 ]
