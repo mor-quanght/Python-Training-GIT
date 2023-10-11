@@ -19,7 +19,7 @@ from django.urls import path,include
 from menu import views
 
 urlpatterns = [
-    path('admin', admin.site.urls),
-    path('menu/', include('menu.urls')),
+    path('my_menu/', include('menu.urls')),
+    path('', admin.site.urls),
 
 ]
