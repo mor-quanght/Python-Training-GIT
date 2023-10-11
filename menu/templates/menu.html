@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+    <a href="{% url 'them_sinh_vien' %}" >1. Thêm sinh viên.</a>  <br/>
+    <a href="{% url 'cap_nhap_bang_id' %}" >2. Cập nhật thông tin sinh viên bởi ID.</a> <br/>
+    <a href="{% url 'xoa_bang_id' %}" >3. Xóa sinh viên bởi ID.</a> <br/>
+    <a href="{% url 'tim_kiem_bang_ten' %}" >4. Tìm kiếm sinh viên theo tên.</a> <br/>
+    <a href="{% url 'sap_xep' 'diem_tb' 'asc' %}" >5. Sắp xếp sinh viên theo điểm trung bình (GPA - tăng dần).</a> <br/>
+    <a href="{% url 'sap_xep' 'ten' 'asc' %}" >6. Sắp xếp sinh viên theo tên tăng dần theo bảng chữ cái.</a> <br/>
+    <a href="{% url 'sap_xep' 'id' 'desc' %}" >7. Sắp xếp sinh viên theo ID giảm dần.</a> <br/>
+    <a href="{% url 'hien_thi' %}" >8. Hiển thị danh sách sinh viên.</a> <br/>
+
+</body>
+</html>

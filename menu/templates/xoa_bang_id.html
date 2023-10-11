@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xoa sinh vien</title>
+</head>
+<body>
+ <form action="/my_menu/xoa_bang_id" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+ </form>
+</body>
+</html>
