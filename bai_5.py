@@ -12,16 +12,18 @@ def doi_xung():
         set_left.add(my_list[id])
         set_right.add(my_list[-(id+1)])
         id+=1
+
     if set_left-set_right!=set():
         return 'Khong co kha nang doi xung'
     else:
-        id = len(my_list)-1
-
-        while id>len(my_list)//2:
-            my_list[id]=set_left.pop()
-            id-=1
+        id=0
+        while id < len(my_list)//2:
+            my_list[-(id+1)]=my_list[id]
+            id+=1
         output = ''.join(my_list)
+
         return output
+
 
 print(doi_xung())
 
